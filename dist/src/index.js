@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.decrypt = exports.encrypt = void 0;
-var crypto_1 = require("crypto");
+var _a = require('crypto'), randomBytes = _a.randomBytes, createCipheriv = _a.createCipheriv, createDecipheriv = _a.createDecipheriv;
 function encrypt(key, input) {
     var keyBuffer = Buffer.from(key);
-    var iv = crypto_1.randomBytes(16);
-    var cipher = crypto_1.createCipheriv('aes-256-gcm', keyBuffer, iv);
+    var iv = randomBytes(16);
+    var cipher = createCipheriv('aes-256-gcm', keyBuffer, iv);
     var encrypted = Buffer.concat([cipher.update(input, 'utf8'), cipher.final()]);
     var tag = cipher.getAuthTag();
     return Buffer.concat([iv, tag, encrypted]).toString('base64');
@@ -17,7 +17,7 @@ function decrypt(key, input) {
     var iv = inputBuffer.slice(0, 16);
     var tag = inputBuffer.slice(16, 32);
     var text = inputBuffer.slice(32);
-    var decipher = crypto_1.createDecipheriv('aes-256-gcm', keyBuffer, iv);
+    var decipher = createDecipheriv('aes-256-gcm', keyBuffer, iv);
     decipher.setAuthTag(tag);
     var decrypted = decipher.update(text) + decipher.final('utf8');
     return decrypted;

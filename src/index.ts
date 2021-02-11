@@ -1,4 +1,4 @@
-import { randomBytes, createCipheriv, createDecipheriv } from 'crypto'
+const { randomBytes, createCipheriv, createDecipheriv } = require('crypto')
 
 export function encrypt(key: string, input: string): string {
   const keyBuffer = Buffer.from(key)

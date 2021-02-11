@@ -212,7 +212,7 @@
         "affectsGlobalScope": true
       },
       "../src/index.ts": {
-        "version": "c5a564d0d0888a8a84206cf3310d8d1937dadd755b2d683363bd21af82d72a71",
+        "version": "88a1670b46ff1e77cb26a2beab24c7638f9380ea8e38ebf6c2a8bc1de930550f",
         "signature": "26c130c3505de4af2cd97e461b8c7524902ea71b19d7576069a1d2c1465861c3",
         "affectsGlobalScope": false
       },
@@ -829,9 +829,6 @@
       ],
       "../node_modules/pretty-format/build/index.d.ts": [
         "../node_modules/pretty-format/build/types.d.ts"
-      ],
-      "../src/index.ts": [
-        "../node_modules/@types/node/crypto.d.ts"
       ],
       "../tests/index.spec.ts": [
         "../src/index.ts"
