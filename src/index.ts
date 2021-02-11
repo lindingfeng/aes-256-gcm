@@ -1,8 +1,12 @@
-const { randomBytes, createCipheriv, createDecipheriv } = require('crypto')
+// const { randomBytes, createCipheriv, createDecipheriv } = require('crypto')
+const { createCipheriv, createDecipheriv } = require('browserify-cipher/browser.js');
+const randomBytes = require('randombytes');
 
 export function encrypt(key: string, input: string): string {
   const keyBuffer = Buffer.from(key)
   const iv = randomBytes(16)
+  // const keyBuffer = key
+  // const iv = key
 
   const cipher = createCipheriv('aes-256-gcm', keyBuffer, iv)
 

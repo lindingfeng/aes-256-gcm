@@ -19,6 +19,11 @@
     "extends": "@devoxa"
   },
   "prettier": "@devoxa/prettier-config",
+  "dependencies": {
+    "browserify-cipher": "^1.0.0",
+    "randombytes": "^2.1.0",
+    "randomfill": "^1.0.3"
+  },
   "devDependencies": {
     "@devoxa/eslint-config": "^1.0.0",
     "@devoxa/prettier-config": "^1.0.0",

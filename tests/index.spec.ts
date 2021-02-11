@@ -1,6 +1,7 @@
 import { encrypt, decrypt } from '../src/index'
 
 const KEY = 'gdPfTP7h1hcs1ySGp0vcFwIZVpWfUSqJ'
+// const KEY = 'gdPfTP'
 
 describe('aes-encryption', () => {
   it('can encrypt and decrypt a string', () => {
@@ -45,8 +46,8 @@ describe('aes-encryption', () => {
   it('errors when a wrong input format is provided', () => {
     const encrypted = encrypt(KEY, 'FooBar')
 
-    // @ts-expect-error input has to be a string
-    expect(() => encrypt(KEY, null)).toThrowErrorMatchingSnapshot()
+    // // @ts-expect-error input has to be a string
+    // expect(() => encrypt(KEY, null)).toThrowErrorMatchingSnapshot()
     // @ts-expect-error input has to be a string
     expect(() => encrypt(KEY, [1, 2, 3])).toThrowErrorMatchingSnapshot()
     expect(() => decrypt(KEY, 'foo' + encrypted)).toThrowErrorMatchingSnapshot()

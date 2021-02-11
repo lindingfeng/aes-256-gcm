@@ -212,12 +212,12 @@
         "affectsGlobalScope": true
       },
       "../src/index.ts": {
-        "version": "88a1670b46ff1e77cb26a2beab24c7638f9380ea8e38ebf6c2a8bc1de930550f",
+        "version": "7119259b69fb856ba066767a8756b9a2f8815606f68eec6d7ccd7cb334db5ecc",
         "signature": "26c130c3505de4af2cd97e461b8c7524902ea71b19d7576069a1d2c1465861c3",
         "affectsGlobalScope": false
       },
       "../tests/index.spec.ts": {
-        "version": "2b50928207f443b91485839582e5e2f2d3e4bce8d28b7de1bcca4e30ae43c5f3",
+        "version": "ded539fe0e9e5720a2de7bade272afce69e3fc77e0e7b3729c85ac5322e934dd",
         "signature": "8e609bb71c20b858c77f0e9f90bb1319db8477b13f9f965f1a1e18524bf50881",
         "affectsGlobalScope": false
       },

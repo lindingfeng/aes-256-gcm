@@ -35,7 +35,6 @@ describe('aes-encryption', function () {
     });
     it('errors when a wrong input format is provided', function () {
         var encrypted = index_1.encrypt(KEY, 'FooBar');
-        expect(function () { return index_1.encrypt(KEY, null); }).toThrowErrorMatchingSnapshot();
         expect(function () { return index_1.encrypt(KEY, [1, 2, 3]); }).toThrowErrorMatchingSnapshot();
         expect(function () { return index_1.decrypt(KEY, 'foo' + encrypted); }).toThrowErrorMatchingSnapshot();
         expect(function () { return index_1.decrypt(KEY, [encrypted]); }).toThrowErrorMatchingSnapshot();
