@@ -212,7 +212,7 @@
         "affectsGlobalScope": true
       },
       "../src/index.ts": {
-        "version": "7119259b69fb856ba066767a8756b9a2f8815606f68eec6d7ccd7cb334db5ecc",
+        "version": "418a7283b1c058fd9f09c77d2fc56e46e902be4a577b444c507c82be0fc1e606",
         "signature": "26c130c3505de4af2cd97e461b8c7524902ea71b19d7576069a1d2c1465861c3",
         "affectsGlobalScope": false
       },

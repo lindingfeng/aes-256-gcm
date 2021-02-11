@@ -1,8 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.decrypt = exports.encrypt = void 0;
-var _a = require('browserify-cipher/browser.js'), createCipheriv = _a.createCipheriv, createDecipheriv = _a.createDecipheriv;
-var randomBytes = require('randombytes');
+var randomBytes = require('crypto').randomBytes;
+var createCipheriv = require('crypto').createCipheriv;
+var createDecipheriv = require('crypto').createDecipheriv;
 function encrypt(key, input) {
     var keyBuffer = Buffer.from(key);
     var iv = randomBytes(16);

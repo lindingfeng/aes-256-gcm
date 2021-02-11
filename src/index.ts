@@ -1,6 +1,8 @@
-// const { randomBytes, createCipheriv, createDecipheriv } = require('crypto')
-const { createCipheriv, createDecipheriv } = require('browserify-cipher/browser.js');
-const randomBytes = require('randombytes');
+const randomBytes = require('crypto').randomBytes
+const createCipheriv = require('crypto').createCipheriv
+const createDecipheriv = require('crypto').createDecipheriv
+// const { createCipheriv, createDecipheriv } = require('browserify-cipher/browser.js');
+// const randomBytes = require('randombytes');
 
 export function encrypt(key: string, input: string): string {
   const keyBuffer = Buffer.from(key)
