@@ -1,10 +1,10 @@
-import * as crypto from 'crypto'
+import { randomBytes, createCipheriv, createDecipheriv } from 'crypto'
 
 export function encrypt(key: string, input: string): string {
   const keyBuffer = Buffer.from(key)
-  const iv = crypto.randomBytes(16)
+  const iv = randomBytes(16)
 
-  const cipher = crypto.createCipheriv('aes-256-gcm', keyBuffer, iv)
+  const cipher = createCipheriv('aes-256-gcm', keyBuffer, iv)
 
   const encrypted = Buffer.concat([cipher.update(input, 'utf8'), cipher.final()])
   const tag = cipher.getAuthTag()
@@ -20,7 +20,7 @@ export function decrypt(key: string, input: string): string {
   const tag = inputBuffer.slice(16, 32)
   const text = inputBuffer.slice(32)
 
-  const decipher = crypto.createDecipheriv('aes-256-gcm', keyBuffer, iv)
+  const decipher = createDecipheriv('aes-256-gcm', keyBuffer, iv)
   decipher.setAuthTag(tag)
 
   const decrypted = decipher.update(text) + decipher.final('utf8')
