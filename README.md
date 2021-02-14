@@ -45,16 +45,13 @@
 ## Installation
 
 ```bash
-yarn add @devoxa/aes-encryption
+yarn add @lindingfeng/aes-256-gcm
 ```
 
 ## Usage
 
-**Under no circumstances use this for passwords. You should be using hashing instead.
-[Read more](https://stackoverflow.com/a/477578)**
-
 ```ts
-import { encrypt, decrypt } from '@devoxa/aes-encryption'
+import { encrypt, decrypt } from '@lindingfeng/aes-256-gcm'
 
 // The 32 character encryption key
 const key = 'ZtdDl3Ex7ycFfgdbAC3uTLNk8eLVDcEd'
@@ -65,27 +62,6 @@ const encrypted = encrypt(key, 'My secret text')
 const decrypted = decrypt(key, encrypted)
 // -> 'My secret text'
 ```
-
-## Contributors
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://www.david-reess.de"><img src="https://avatars3.githubusercontent.com/u/4615516?v=4" width="75px;" alt=""/><br /><sub><b>David Reeß</b></sub></a><br /><a href="https://github.com/devoxa/aes-encryption/commits?author=queicherius" title="Code">💻</a> <a href="https://github.com/devoxa/aes-encryption/commits?author=queicherius" title="Documentation">📖</a> <a href="https://github.com/devoxa/aes-encryption/commits?author=queicherius" title="Tests">⚠️</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
-specification. Contributions of any kind welcome!
 
 ## License
 
