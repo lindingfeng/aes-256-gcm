@@ -5,7 +5,7 @@
   "main": "dist/src/index.js",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/devoxa/aes-encryption"
+    "url": "http://gitlab.huishoubao.com/web_team/ziyou/aes-256-gcm.git"
   },
   "scripts": {
     "test": "jest",
