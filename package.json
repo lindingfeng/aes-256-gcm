@@ -1,5 +1,5 @@
 {
-  "name": "@devoxa/aes-encryption",
+  "name": "aes-256-gcm",
   "description": "Encrypting and decrypting strings with `aes-256-gcm`",
   "version": "1.0.3",
   "main": "dist/src/index.js",
