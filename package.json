@@ -1,7 +1,7 @@
 {
   "name": "aes-256-gcm",
   "description": "Encrypting and decrypting strings with `aes-256-gcm`",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "main": "dist/src/index.js",
   "license": "MIT",
   "repository": {
@@ -22,7 +22,9 @@
   "dependencies": {
     "browserify-cipher": "^1.0.0",
     "randombytes": "^2.1.0",
-    "randomfill": "^1.0.3"
+    "randomfill": "^1.0.3",
+    "safe-buffer": "^5.0.1",
+    "stream": "^0.0.2"
   },
   "devDependencies": {
     "@devoxa/eslint-config": "^1.0.0",
